@@ -1,7 +1,12 @@
 import { launch } from 'puppeteer'
 import { Client, TextMessage } from '@line/bot-sdk'
+import { schedule } from 'node-cron'
 
 // check environment variables
+const cronExpression = process.env.CRON_EXPRESSION
+if (cronExpression == null) {
+    throw new Error('cront expression ($CRON_EXPRESSION) is not defined in the environment variable.')
+}
 if (process.env.LINE_TOKEN == null) {
     throw new Error('LINE access token ($LINE_TOKEN) is not defined in the environment variable.')
 }
@@ -42,4 +47,5 @@ const crawl = async () => {
     await browser.close()
 }
 
-crawl()
+// perform checks regularly
+schedule(cronExpression, crawl)

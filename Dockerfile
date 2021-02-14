@@ -1,6 +1,8 @@
 FROM alpine:edge
 
-ENV LINE_TOKEN line_token
+ENV CRON_EXPRESSION="0 0 */1 * *" \
+    LINE_TOKEN="line_token" \
+    LINE_USERID="line_userid"
 
 RUN apk update
 
