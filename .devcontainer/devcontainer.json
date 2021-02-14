@@ -1,0 +1,10 @@
+{
+    "name": "scraping-canyon-outlet",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "puppeteer-app",
+    "workspaceFolder": "/app",
+    "extensions": [
+        "editorconfig.editorconfig"
+    ],
+    "settings": [],
+}
