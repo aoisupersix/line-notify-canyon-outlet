@@ -4,7 +4,9 @@
     "service": "puppeteer-app",
     "workspaceFolder": "/app",
     "extensions": [
-        "editorconfig.editorconfig"
+        "editorconfig.editorconfig",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
     ],
     "settings": [],
 }
