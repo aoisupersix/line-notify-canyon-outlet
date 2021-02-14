@@ -1,5 +1,5 @@
 {
-    "name": "scraping-canyon-outlet",
+    "name": "line-notify-canyon-outlet",
     "dockerComposeFile": "docker-compose.yml",
     "service": "puppeteer-app",
     "workspaceFolder": "/app",
